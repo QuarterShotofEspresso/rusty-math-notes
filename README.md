@@ -9,10 +9,11 @@ Notes are accessible at <todo: paste link>
 ## Dependencies
 Naturally, this project was written in 100% Rust <333. Listed are some of the crates used for this project:
 - [Leptos](https://leptos.dev)
-- [latex2mathml](https://crates.io/crates/latex2mathml) ([supported synatx](https://github.com/osanshouo/latex2mathml/blob/master/src/token.rs))
+- [latex2mathml](https://crates.io/crates/latex2mathml) ([supported syntax](https://github.com/osanshouo/latex2mathml/blob/master/src/token.rs))
+- [Latin Modern Math](https://www.cdnfonts.com/latin-modern-math.font) (font)
 
 ## Todo
-- Font sucks.
+- ~~Font sucks.~~ Fixed: Latin Modern Math.
 - Pages need to be added for scaling notes + classes.
 - Development proc could be further improved.
 - Content can continue to be added at the very least. And eventually a hosted on github (hopefully).
