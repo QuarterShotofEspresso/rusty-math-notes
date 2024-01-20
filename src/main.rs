@@ -87,7 +87,7 @@ fn App() -> impl IntoView {
             // par!("A Turing Machine $M$ has the following definition")
             <Eq content=r#"A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}"#/>
             <Para content=r#"A $\textit{relation}$ between $A$ and $B$ is a subset $R \subseteq A \times B$. If $(a, b) \in R$, then "$a$ is related to $b$" and we can write $aRb$."#/>
-            <Para content=r#"A function $\Phi \colon X \rightarrow Y$ is a relation on $X \times Y$ where elements are written as $(x, y)$ and $y = \Phi(x)$. In this form, $X$ is the $\textit{domain}$, and $Y$ is the $\textit{codomain}$. The $\textit{range}$ is defined as $\Phi[X] := \{\Phi(x) \colon x \in X\}$."#/>
+            <Para content=r#"A function $\phi \colon X \rightarrow Y$ is a relation on $X \times Y$ where elements are written as $(x, y)$ and $y = \phi(x)$. In this form, $X$ is the $\textit{domain}$, and $Y$ is the $\textit{codomain}$. The $\textit{range}$ is defined as $\phi[X] := \{\phi(x) \colon x \in X\}$."#/>
         </div>
     }
 }
