@@ -309,12 +309,32 @@ function __wbg_get_imports() {
     imports.wbg.__wbg_before_bed7b7b6e53dd469 = function() { return handleError(function (arg0, arg1) {
         getObject(arg0).before(getObject(arg1));
     }, arguments) };
+    imports.wbg.__wbg_error_1f4e3e298a7c97f6 = function(arg0) {
+        console.error(getObject(arg0));
+    };
     imports.wbg.__wbg_warn_0e0204547af47087 = function(arg0) {
         console.warn(getObject(arg0));
     };
     imports.wbg.__wbg_append_b492f6e8cbc2ac32 = function() { return handleError(function (arg0, arg1, arg2) {
         getObject(arg0).append(getObject(arg1), getObject(arg2));
     }, arguments) };
+    imports.wbg.__wbg_removeProperty_569b8c8469084b23 = function() { return handleError(function (arg0, arg1, arg2, arg3) {
+        var v0 = getCachedStringFromWasm0(arg2, arg3);
+        const ret = getObject(arg1).removeProperty(v0);
+        const ptr2 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len2 = WASM_VECTOR_LEN;
+        getInt32Memory0()[arg0 / 4 + 1] = len2;
+        getInt32Memory0()[arg0 / 4 + 0] = ptr2;
+    }, arguments) };
+    imports.wbg.__wbg_setProperty_a763529f4ef8ac76 = function() { return handleError(function (arg0, arg1, arg2, arg3, arg4) {
+        var v0 = getCachedStringFromWasm0(arg1, arg2);
+        var v1 = getCachedStringFromWasm0(arg3, arg4);
+        getObject(arg0).setProperty(v0, v1);
+    }, arguments) };
+    imports.wbg.__wbg_style_b32d5cb9a6bd4720 = function(arg0) {
+        const ret = getObject(arg0).style;
+        return addHeapObject(ret);
+    };
     imports.wbg.__wbg_childNodes_75d3da5f3a7bb985 = function(arg0) {
         const ret = getObject(arg0).childNodes;
         return addHeapObject(ret);
@@ -419,7 +439,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('notes-29c746fc9df5cd6ac762515719d755901563b46df68df8ce721a9cbd01df61af0db73b47c938f3607bbae9f2b95f15b7_bg.wasm', import.meta.url);
+        input = new URL('notes-ac4de0d5ad3639cc98f28dce8e327cb98b8916effdcff688b61a79dbf323887fde617789d525723fe6565590f562dafd_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

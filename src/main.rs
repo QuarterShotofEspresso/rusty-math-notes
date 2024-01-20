@@ -3,7 +3,7 @@ use latex2mathml::{latex_to_mathml, DisplayStyle};
 
 fn main() {
 
-    let latex = r#"\erf ( x ) = \frac{ 2 }{ \sqrt{ \pi } } \int_0^x e^{- t^2} \, dt"#;
+    let latex = r#"\sin ( x ) = \frac{ 2 }{ \sqrt{ \pi } } \int_0^x e^{- t^2} \, dt"#;
     let mathml = latex_to_mathml(latex, DisplayStyle::Block).unwrap();
     println!("{}", mathml);
 
@@ -16,27 +16,48 @@ fn main() {
 #[component]
 fn App() -> impl IntoView {
     // let (count, set_count) = create_signal(0);
-    let latex = r#"\erf ( x ) = \frac{ 2 }{ \sqrt{ \pi } } \int_0^x e^{- t^2} \, dt"#;
-    let mathml = latex_to_mathml(latex, DisplayStyle::Block).unwrap();
+    // let latex = r#"\sin x = \frac{ (2) }{ \sqrt{ \pi } } \int_0^x (e^{- t^2}) \, dt"#;
+    // let mathml = latex_to_mathml(latex, DisplayStyle::Block).unwrap();
+
+    let latex = r#"M = \left( Q, \Sigma, \Gamma, \delta, q_0, q_{\textit{acc}}, q_{\textit{rej}} \right)"#;
+    let mathml = latex2mathml::latex_to_mathml(latex, DisplayStyle::Block).unwrap();
+
+    // BUt we coudl also write the following interpretation:
+    //     $$\sum_{i=0}^N \frac{a}{b}$$
+    //     where $\delta: Q \times \Gamma \implies Q \times \Gamma \times \{L, R\}$.
 
     view! {
-        // <button
-        //     on:click=move |_| set_count.update(|count| *count += 1);
-        // >
-        //     "Click me: "
-        //     {move || count.get()}
-        // </button>
-        <Spacer/>
-        <div class="border-style journal" inner_html=mathml/>
+        <Spacer vskip="150px"/>
+        <Title/>
+        <div class="border-style journal">
+            <div class="journal-para border-style" inner_html=latex2mathml::replace("A Turing Machine $M$ has the following definition").unwrap() />
+            // <div class="journal-content border-style" inner_html="A Turing Machine $M$ has the following definition" />
+            <Spacer vskip="0.5em"/>
+            <div class="journal-eq border-style" inner_html=mathml/>
+        </div>
     }
 }
 
 
 #[component]
-fn Spacer() -> impl IntoView {
+fn Title() -> impl IntoView {
     view! {
-        <div class="spacer border-style">
-            "spacer"
+        <div class="title border-style">
+            "Rusty notes."
+        </div>
+    }
+}
+
+
+#[component]
+fn Spacer(
+    #[prop(default = "1em")]
+    vskip: &'static str,
+) -> impl IntoView {
+    view! {
+        // <div style:height=format!("{}px", vskip) class="journal-spacer border-style">
+        <div style:height=vskip class="spacer border-style">
+            // "journal-spacer"
         </div>
     }
 }
