@@ -27,13 +27,13 @@ fn App() -> impl IntoView {
     //     where $\delta: Q \times \Gamma \implies Q \times \Gamma \times \{L, R\}$.
 
     view! {
-        <Spacer vskip="150px"/>
-        <Title/>
-        <div class="border-style journal">
-            <div class="journal-para border-style" inner_html=latex2mathml::replace("A Turing Machine $M$ has the following definition").unwrap() />
-            // <div class="journal-content border-style" inner_html="A Turing Machine $M$ has the following definition" />
+        <div class="dbg journal">
+            <Spacer vskip="150px"/>
+            <Title/>
+            <Spacer vskip="1em"/>
+            <div class="journal-para dbg" inner_html=latex2mathml::replace("A Turing Machine $M$ has the following definition").unwrap() />
             <Spacer vskip="0.5em"/>
-            <div class="journal-eq border-style" inner_html=mathml/>
+            <div class="journal-eq dbg" inner_html=mathml/>
         </div>
     }
 }
@@ -42,7 +42,7 @@ fn App() -> impl IntoView {
 #[component]
 fn Title() -> impl IntoView {
     view! {
-        <div class="title border-style">
+        <div class="title dbg">
             "Rusty notes."
         </div>
     }
@@ -55,8 +55,8 @@ fn Spacer(
     vskip: &'static str,
 ) -> impl IntoView {
     view! {
-        // <div style:height=format!("{}px", vskip) class="journal-spacer border-style">
-        <div style:height=vskip class="spacer border-style">
+        // <div style:height=format!("{}px", vskip) class="journal-spacer dbg">
+        <div style:height=vskip class="spacer dbg">
             // "journal-spacer"
         </div>
     }
