@@ -14,6 +14,8 @@ Naturally, this project was written in 100% Rust <333. Listed are some of the cr
 
 ## Todo
 - ~~Font sucks.~~ Fixed: Latin Modern Math.
+- ~~Development proc could be further improved.~~ Fixed. Boilerplate's been boiled away.
+- More content needs to be added.
+- Host on github pages (after content for 171 is up to date).
 - Pages need to be added for scaling notes + classes.
-- Development proc could be further improved.
-- Content can continue to be added at the very least. And eventually a hosted on github (hopefully).
+- Project structure needs to be cleaned up a little.

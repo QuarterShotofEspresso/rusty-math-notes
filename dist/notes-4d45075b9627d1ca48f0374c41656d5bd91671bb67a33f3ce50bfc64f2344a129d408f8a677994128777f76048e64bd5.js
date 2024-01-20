@@ -439,7 +439,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('notes-c171a3b5c16b4785c361f99243c63f057a23847296fae45ffd2d404cb200d7e948a7900e3336838e3c39d869de564dc4_bg.wasm', import.meta.url);
+        input = new URL('notes-4d45075b9627d1ca48f0374c41656d5bd91671bb67a33f3ce50bfc64f2344a129d408f8a677994128777f76048e64bd5_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
