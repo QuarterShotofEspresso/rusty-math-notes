@@ -96,7 +96,7 @@ macro_rules! base {
 fn App() -> impl IntoView { base!(
     vskip!("150px"),
     title!("Rusty notes."),
-    par!(r#"Let $A$ and $B$ be two sets. The $\textit{Cartesian \; Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we write"#),
+    par!(r#"Let $A$ and $B$ be two sets. The $\textit{Cartesian \; Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as"#),
     eq!(r#"A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}"#),
     par!(r#"A $\textit{relation}$ between $A$ and $B$ is a subset $R \subseteq A \times B$. If $(a, b) \in R$, then "$a$ is related to $b$" and we can write $aRb$."#),
     par!(r#"A function $\phi \, \colon \, X \rightarrow Y$ is a relation on $X \times Y$ where elements are written as $(x, y)$ and $y = \phi(x)$. In this form, $X$ is the $\textit{domain}$, and $Y$ is the $\textit{codomain}$. The $\textit{range}$ is defined as $\phi[X] := \{\phi(x) \, \colon \, x \in X\}$."#),

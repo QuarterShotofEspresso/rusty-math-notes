@@ -19,3 +19,4 @@ Naturally, this project was written in 100% Rust <333. Listed are some of the cr
 - Host on github pages (after content for 171 is up to date).
 - Pages need to be added for scaling notes + classes.
 - Project structure needs to be cleaned up a little.
+- For the home page add a square animation that spans the width of the `journal` and add topic selections below that.
