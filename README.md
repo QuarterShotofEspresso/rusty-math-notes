@@ -1,4 +1,4 @@
-# (Math) Notes
+# Rusty (Math) Notes
 > Author: Ratnodeep Bandyopadhyay ([@QuarterShotofEspresso](https://github.com/QuarterShotofEspresso))
 
 ## What's this about?
