@@ -96,9 +96,18 @@ macro_rules! base {
 fn App() -> impl IntoView { base!(
     vskip!("150px"),
     title!("Rusty notes."),
-    par!(r#"Let $A$ and $B$ be two sets. The $\textit{Cartesian \; Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as"#),
-    eq!(r#"A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}"#),
-    par!(r#"A $\textit{relation}$ between $A$ and $B$ is a subset $R \subseteq A \times B$. If $(a, b) \in R$, then "$a$ is related to $b$" and we can write $aRb$."#),
+
+    // Target Syntax (modifying the latex2mathml crate):
+    // $\textit{Cartesian \; Product}$ ---> \textit{Cartesian Product}
+    // ---> \vskip{}
+    par!(r#"Let $A$ and $B$ be two sets. The $\textit{Cartesian Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as
+    $$\vskip 0.5em$$
+    $$A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}$$
+    $$\vskip 0.6em$$
+    A $\textit{relation}$ between $A$ and $B$ is a subset $R \subseteq A \times B$. If $(a, b) \in R$, then "$a$ is related to $b$" and we can write $aRb$."#),
+    // par!(r#"Let $A$ and $B$ be two sets. The $\textit{Cartesian \; Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as"#),
+    // eq!(r#"A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}"#),
+    // par!(r#"A $\textit{relation}$ between $A$ and $B$ is a subset $R \subseteq A \times B$. If $(a, b) \in R$, then "$a$ is related to $b$" and we can write $aRb$."#),
     par!(r#"A function $\phi \, \colon \, X \rightarrow Y$ is a relation on $X \times Y$ where elements are written as $(x, y)$ and $y = \phi(x)$. In this form, $X$ is the $\textit{domain}$, and $Y$ is the $\textit{codomain}$. The $\textit{range}$ is defined as $\phi[X] := \{\phi(x) \, \colon \, x \in X\}$."#),
     par!(r#"The number of elements $m$ in the set X represents the $\textit{cardinality}$ of $X$ and is represented by $|X|$."#),
     par!(r#"To demonstrate two sets $X$ and $Y$ have the same cardinality, we must map each element of $X$ to each element of $Y$. Such pairings/mappings are called a $\textit{one-to-one\;correspondance}$ (also called $\textit{injective}$ in some texts)."#),

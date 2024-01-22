@@ -658,8 +658,7 @@ dependencies = [
 [[package]]
 name = "latex2mathml"
 version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "678cf5bdb3ba63a264e6e0c9eee36538ca1d2da0afa4dd801c1f96309e710765"
+source = "git+https://github.com/QuarterShotofEspresso/latex2mathml.git#d2c55961e3d8f5e1b76a25cae010855faaf5ced5"
 
 [[package]]
 name = "lazy_static"

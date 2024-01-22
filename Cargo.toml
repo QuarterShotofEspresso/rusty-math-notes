@@ -8,3 +8,6 @@ edition = "2021"
 [dependencies]
 leptos = { version = "0.5.6", features = ["csr", "nightly"] }
 latex2mathml = "*"
+
+[patch.crates-io]
+latex2mathml = {git = "https://github.com/QuarterShotofEspresso/latex2mathml.git"}
