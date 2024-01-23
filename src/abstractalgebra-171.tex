@@ -1,4 +1,4 @@
-Let $A$ and $B$ be two sets. The $\textit{Cartesian Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as
+Let $A$ and $B$ be two sets. The $\textit{Cartesian \; Product}$ is defined as the set of two-tuples contining every combination of elements from both sets. Formally, we express this as
 $$\vskip 0.5em$$
 $$A \times B = \{(a, b) \; \colon \; a \in A, \, b \in B\}$$
 $$\vskip 0.6em$$
@@ -10,10 +10,17 @@ The number of elements $m$ in the set X represents the $\textit{cardinality}$ of
 $$\vskip 0.6em$$
 To demonstrate two sets $X$ and $Y$ have the same cardinality, we must map each element of $X$ to each element of $Y$. Such pairings/mappings are called a $\textit{one-to-one\;correspondance}$ (also called $\textit{injective}$ in some texts).
 $$\vskip 0.6em$$
-A function $\phi \, \colon \, X \rightarrow Y$ is injective if $ \forall x_1, x_2 \in X, \, \phi(x_1) = \phi(x_2)$, then $x_1 = x_2$. A function is $\textit{onto}$ (also reffered to as $\textit{susrjective}$ in some texts) if the range of $\phi$ is $Y$. That is, $\phi[X] = Y$. A function which is both surjective and injective is called $\textit{bijective}$.
+A function $\phi \, \colon \, X \rightarrow Y$ is injective if $ \forall x_1, x_2 \in X, \, \phi(x_1) = \phi(x_2)$, then $x_1 = x_2$. A function is $\textit{onto}$ (also reffered to as $\textit{surjective}$ in some texts) if the range of $\phi$ is $Y$. That is, $\phi[X] = Y$. A function which is both surjective and injective is called $\textit{bijective}$.
 $$\vskip 0.6em$$
 Bijective functions exhibit a property such that they have an inverse.
 $$\vskip 0.6em$$
 $X$ and $Y$ have the same cardinality when $\exists \phi \, \colon \, X \rightarrow Y$ such that $\phi$ is both surjective and injective.
 $$\vskip 0.6em$$
-An equivalence relation $R$ on a set $S$ is a relation (so $R \subseteq S \times S$), such that, $\forall x, y, z \in S$
+An equivalence relation $R$ on a set $S$ is a relation (so $R \subseteq S \times S$), such that, $\forall x, y, z \in S$ $R$ is $\textit{relexive}$ $xRx$, $R$ is $\textit{symmetric}$ $xRy \implies yRx$, and $R$ is $\textit{transitive}$ $xRy \wedge yRz \implies xRz$.
+$$\vskip 0.6em$$
+A $\textit{binary \; operation} \, \star$ on a set $S$ is a map $\star \, \colon \, S \times S \rightarrow S$.
+$$\vskip 0.6em$$
+Let $\star$ be a binary operation on $S$, and let $H \subseteq S$. This subset is closed under $\star$ if $\forall a,b \in H$, we have $a \star b \in H$.
+$$\vskip 0.6em$$
+
+A binary operation $\star$ on a set $S$ is $\textit{commutative}$ if (and only if) $a \star b = b \star a \; \forall a,b \in S$.
